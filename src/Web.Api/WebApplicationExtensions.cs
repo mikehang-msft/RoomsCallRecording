@@ -12,7 +12,7 @@ public static class WebApplicationExtensions
         app.MapPost("api/room", async ([FromBody] IEnumerable<string>? participants, RoomsClient roomsClient) =>
         {
             var roomsParticipants = new List<RoomParticipant>();
-            foreach(var participant in participants)
+            foreach (var participant in participants)
             {
                 roomsParticipants.Add(new RoomParticipant(new CommunicationUserIdentifier(participant))
                 {
@@ -56,9 +56,9 @@ public static class WebApplicationExtensions
 
     // need this because async streams can't be used in a lambda function
     private static async IAsyncEnumerable<T> ProcessData<T>(AsyncPageable<T> data)
-    where T: notnull
+    where T : notnull
     {
-        await foreach(var item in data)
+        await foreach (var item in data)
         {
             yield return item;
         }
