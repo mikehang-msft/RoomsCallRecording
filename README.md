@@ -1,5 +1,3 @@
-[[_TOC_]]
-
 # Overview
 `RoomsCallRecording` project demonstrates the ability to perform a recording inside a Room call by integrating Azure Communication Service (ACS) Rooms, calling SDK, and Call Automation (CA). This document highlights major components, prerequisites, and instructions to execute a sample application to perform a room call recording. 
 The following components are used in this demonstration.
